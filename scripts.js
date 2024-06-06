@@ -1,4 +1,5 @@
 const currentTemp = document.getElementById('currentTemp');
+const currentConditionImage = document.getElementById('currentConditionsImage');
 
 async function getCurrentWeather() {
     const response = await fetch(
@@ -6,7 +7,9 @@ async function getCurrentWeather() {
 		{ mode: 'cors' }
 	);
     const currentWeatherData = await response.json();
+    console.log(currentWeatherData);
     currentTemp.innerText = `The current temperature is ${currentWeatherData.current.temp_f}\u00B0F.`;
+    currentConditionImage.src = currentWeatherData.current.condition.icon;
 }
 
 getCurrentWeather();
