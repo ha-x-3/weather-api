@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="/images/weather-forecast.png" />
-</head>
-<body>
-    <div id="currentTemp"></div>
-    <img src="#" id="currentConditionsImage" />
-    <small><a target="_blank" href="https://icons8.com/icon/kLj4x6XyooyO/weather-forecast">Weather forecast</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></small>
-    <script src="scripts.js"></script>    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Weather API</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/images/weather-forecast.png"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+        <div id="searchDiv">
+            <label for="location-search"
+			>Check the weather in another location:
+            </label>
+            <input
+                type="search"
+                id="location-search"
+                name="q"
+            />
+            <button>Search</button>
+        </div>
+		<h2 id="currentLocation"></h2>
+		<div id="currentForecast">
+			<h3>Current Conditions:</h3>
+			<h1 id="currentTemp"></h1>
+			<img
+				src="#"
+				id="currentConditionsImage"
+			/>
+			<h4 id="currentConditionsText"></h4>
+			<p id="feelsLikeTemp"></p>
+            <small id="lastUpdated"></small>
+		</div>
+		<div id="futureForecast"></div>
+        <footer>
+            <small
+                ><a
+                    target="_blank"
+                    href="https://icons8.com/icon/kLj4x6XyooyO/weather-forecast"
+                    >Weather forecast</a
+                >
+                icon by
+                <a
+                    target="_blank"
+                    href="https://icons8.com"
+                    >Icons8</a
+                ></small
+            >
+        </footer>
+		<script src="scripts.js"></script>
+	</body>
 </html>

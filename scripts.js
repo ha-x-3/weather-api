@@ -1,5 +1,9 @@
+const currentLocation = document.getElementById('currentLocation');
 const currentTemp = document.getElementById('currentTemp');
 const currentConditionImage = document.getElementById('currentConditionsImage');
+const currentConditionText = document.getElementById('currentConditionsText');
+const feelsLikeTemp = document.getElementById('feelsLikeTemp');
+const lastUpdated = document.getElementById('lastUpdated');
 
 async function getCurrentWeather() {
     const response = await fetch(
@@ -8,8 +12,12 @@ async function getCurrentWeather() {
 	);
     const currentWeatherData = await response.json();
     console.log(currentWeatherData);
-    currentTemp.innerText = `The current temperature is ${currentWeatherData.current.temp_f}\u00B0F.`;
+    currentLocation.innerHTML = `${currentWeatherData.location.name}, ${currentWeatherData.location.region}`;
+    currentTemp.innerText = `${currentWeatherData.current.temp_f}\u00B0F`;
     currentConditionImage.src = currentWeatherData.current.condition.icon;
+    currentConditionText.innerText = currentWeatherData.current.condition.text;
+    feelsLikeTemp.innerHTML = `Feels like: ${currentWeatherData.current.feelslike_f}\u00B0F`;
+    lastUpdated.innerText = `Last updated: ${currentWeatherData.current.last_updated}`;
 }
 
 getCurrentWeather();
