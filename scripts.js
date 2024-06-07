@@ -12,7 +12,7 @@ const searchButton = document.querySelector('#searchDiv button');
 
 async function fetchWeatherData(location) {
 	const apiKey = 'e53052be24db4c8abb1154941240606';
-	const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3&aqi=no&alerts=yes`;
+	const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3&aqi=no&alerts=yes`;
 
 	try {
 		const response = await fetch(apiUrl, { mode: 'cors' });
