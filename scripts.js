@@ -17,7 +17,7 @@ async function fetchWeatherData(location) {
 	try {
 		const response = await fetch(apiUrl, { mode: 'cors' });
 		const currentWeatherData = await response.json();
-		console.log(currentWeatherData);
+		//console.log(currentWeatherData);
 
 		updateCurrentWeather(currentWeatherData);
 
