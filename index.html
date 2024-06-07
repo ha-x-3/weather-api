@@ -31,45 +31,56 @@
 		/>
 	</head>
 	<body>
-        <div id="searchDiv">
-            <label for="location-search"
-			>Check the weather in another location:
-            </label>
-            <input
-                type="search"
-                id="location-search"
-                name="q"
-            />
-            <button>Search</button>
-        </div>
-		<h2 id="currentLocation"></h2>
-		<div id="currentForecast">
-			<h3>Current Conditions:</h3>
-			<h1 id="currentTemp"></h1>
-			<img
-				src="#"
-				id="currentConditionsImage"
-			/>
-			<h4 id="currentConditionsText"></h4>
-			<p id="feelsLikeTemp"></p>
-            <small id="lastUpdated"></small>
+		<div id="left">
+			<div id="searchDiv">
+				<label for="location-search"
+					>Check the weather in another location:
+				</label>
+				<input
+					type="search"
+					id="location-search"
+					name="q"
+				/>
+				<button>Search</button>
+			</div>
+			<h2 id="currentLocation"></h2>
+			<div id="currentForecast">
+				<h3>Current Conditions:</h3>
+				<h1 id="currentTemp"></h1>
+				<img
+					src="#"
+					id="currentConditionsImage"
+				/>
+				<h4 id="currentConditionsText"></h4>
+				<p id="feelsLikeTemp"></p>
+				<small id="lastUpdated"></small>
+			</div>
 		</div>
-		<div id="futureForecast"></div>
-        <footer>
-            <small
-                ><a
-                    target="_blank"
-                    href="https://icons8.com/icon/kLj4x6XyooyO/weather-forecast"
-                    >Weather forecast</a
-                >
-                icon by
-                <a
-                    target="_blank"
-                    href="https://icons8.com"
-                    >Icons8</a
-                ></small
-            >
-        </footer>
+		<div id="right">
+			<div id="futureDiv">
+				<h3>Forecast for the next 3 days...</h3>
+				<div id="futureForecast">
+					<div id="forecastDay1"></div>
+					<div id="forecastDay2"></div>
+					<div id="forecastDay3"></div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<small
+				><a
+					target="_blank"
+					href="https://icons8.com/icon/kLj4x6XyooyO/weather-forecast"
+					>Weather forecast</a
+				>
+				icon by
+				<a
+					target="_blank"
+					href="https://icons8.com"
+					>Icons8</a
+				></small
+			>
+		</footer>
 		<script src="scripts.js"></script>
 	</body>
 </html>

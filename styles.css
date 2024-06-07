@@ -4,16 +4,25 @@ body {
     box-sizing: border-box;
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#left, #right {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 #searchDiv {
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-#currentForecast {
+#currentForecast, #futureDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +31,23 @@ body {
     border-radius: 8px;
     padding: 10px 30px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#futureForecast {
+    display: flex;
+    gap: 50px;
+}
+
+#forecastDay1, #forecastDay2, #forecastDay3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
 }
 
 small {
