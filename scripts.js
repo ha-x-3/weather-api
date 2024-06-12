@@ -41,7 +41,10 @@ function updateCurrentWeather(weatherData) {
 function updateForecastDay(dayDiv, forecastData) {
 	const dateString = forecastData.date;
 	const [year, month, day] = dateString.split('-');
-	const formattedDate = new Date(year, month - 1, day).toLocaleDateString();
+	const date = new Date(year, month - 1, day);
+	const formattedDate = new Date(
+		date.getTime() + 24 * 60 * 60 * 1000
+	).toLocaleDateString();
 
 	const maxTemp = forecastData.day.maxtemp_f;
 	const minTemp = forecastData.day.mintemp_f;
